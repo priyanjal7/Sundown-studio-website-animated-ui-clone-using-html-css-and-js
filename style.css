@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Neue Haas Grotesk Display Pro",sans-serif;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+}
+
+.main .page1 {
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.page1 nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+    /* background-color: cadetblue; */
+    padding: 0 3vw;
+}
+
+nav .navright {
+    display: flex;
+    gap: 1vw;
+}
+
+nav .navright div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    padding: 10px 20px;
+    border: 2px solid #b5acac;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.navright div span {
+    z-index: 99;
+}
+
+.navright div::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: 100%;
+    transition: all ease 0.5s;
+}
+
+.navright div:hover::before {
+    top: 0;
+}
+.navright div:hover span {
+    color: white;
+}
+
+.page1 .hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 4vw 3vw;
+    width: 100%;
+    height: calc(100vh - 120px);
+    /* background-color: cadetblue; */
+}
+
+.hero h2 {
+    font-size: 2vw;
+}
+
+.hero h1 {
+    text-transform: uppercase;
+    font-size: 10vw;
+    line-height: 10vw;
+    text-align: right;
+    font-weight: 900;
+}
+
+.main .page2 {
+    width: 100%;
+    height: 100vh;
+    padding: 3vw 3vw;
+}
+
+.page2 .videocontainer {
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid black; */
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.videocontainer video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main .marquee {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    /* background-color: white; */
+    overflow-x: hidden;
+}
+
+.slider {
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+}
+
+.marquee .slider h1 {
+    display: inline-block;
+    margin-right: 5vw;
+    font-size: 8vw;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.slider h1::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    width: 60px;
+    height: 60px;
+    background-color: #FE330A;
+    border-radius: 50%;
+    right: -70px;
+}
+
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.main .page3 {
+    width: 100%;
+    height: 100vh;
+    padding: 5vw 5vw;
+    position: relative;
+}
+
+.page3 h1 {
+    font-size: 3.7vw;
+    font-weight: 900;
+    line-height: 3.9vw;
+    position: absolute;
+    z-index: 99;
+}
+
+.page3 .box1 , .box2 {
+    width: 30vw;
+    height: 30vw;
+    background-color: #FE330A;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    filter: blur(20px);
+}
+
+.box2 {
+    /* background-color: blue; */
+    animation: anime 2s linear infinite alternate;
+}
+
+@keyframes anime {
+    from {
+        transform: translate(10%,10%);
+    }
+    to {
+        transform: translate(-10%,-10%);
+    }
+}
+
+.contentpage3 {
+    position: absolute;
+    width: 22vw;
+    height: 60vh;
+    /* border: 2px solid black; */
+    right: 10%;
+    top: 30%;
+    border-radius: 14px;
+    overflow: hidden;
+    
+}
+.contentpage3 .image {
+    width: 100%;
+    height: 50%;
+    background-color: cadetblue;
+    background-image: url("https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15d1_Holding_thumb-p-500.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.contentpage3 p {
+    margin-top: 3vw;
+}
+
+.main .page4 {
+    width: 100%;
+    height: 100vh;
+    padding: 0 3vw;
+}
+
+.page4 h4 {
+    font-size: 17px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 4px 0;
+    margin-bottom: 7vw;
+    /* background-color: cadetblue; */
+}
+
+.page4 h4::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FE330A;
+    border-radius: 50%;
+    right: 100%;
+    margin-right: 10px;
+    top: 30%;
+
+}
+
+.page4 .elem {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    border-bottom: 2px solid black;
+
+}
+
+.elem h1 {
+    position: absolute;
+    font-size: 4vw;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.elem .overlay {
+    
+    width: 100%;
+    height: 0;
+    top: 0;
+    background-color: #FF9831;
+}
